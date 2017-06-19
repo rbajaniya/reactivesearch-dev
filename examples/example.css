@@ -1,0 +1,63 @@
+#top {
+	padding: 0 0 70px 0;
+}
+
+.index-container h1 {
+	font-size: 36px;
+	line-height: 50px;
+	text-align: center;
+	margin: 30px auto;
+}
+
+.index-container ul {
+	list-style: none;
+}
+
+.index-container ul.indexList {
+	border: 1px solid #eee;
+}
+
+.index-container ul.indexList li {
+	padding: 0;
+}
+
+.indexLinkContainer {
+	margin-bottom: 100px;
+}
+
+.index-container li a {
+	font-size: 24px;
+	line-height: 60px;
+}
+
+.index-container li a:hover {
+	background: #f0f0f0;
+	text-decoration: none;
+}
+
+.card {
+	width: 12.9em;
+	height: 8.8em;
+	margin: 1em auto;
+	background: white;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 25px 55px rgba(0, 0, 0, 0.21), 0 16px 28px rgba(0, 0, 0, 0.22);
+	border: 1px solid #eee;
+}
+
+.card .image {
+	flex-grow: 2;
+	background-color: #ccc;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.card h2 {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 12px 0;
+	letter-spacing: 0.05em;
+	text-align: center;
+}

@@ -1,0 +1,26 @@
+.rbc.rbc-viewswitcher {
+	background-color: transparent;
+
+	.rbc-list-container {
+		display: flex;
+		justify-content: flex-end;
+
+		.rbc-list-item {
+			padding: 3px 10px;
+			background-color: #fff;
+			border: 1px solid #eaeaea;
+			border-left: 0;
+			cursor: pointer;
+			transition: all .3s ease;
+			-webkit-transition: all .3s ease;
+
+			&.active {
+				background-color: #f2f2f2;
+			}
+			
+			&:first-child {
+				border-left: 1px solid #eaeaea;
+			}
+		}
+	}
+}

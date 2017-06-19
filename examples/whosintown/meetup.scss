@@ -1,0 +1,172 @@
+$primary-color: #ED1C40;
+$dark-color: #424242;
+
+.mobile-banner {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	display: none;
+	text-align: center;
+	z-index: 101;
+	font-size: 16px;
+	color: #666;
+	padding: 20px;
+	line-height: 30px;
+
+	p {
+		margin: 0;
+	}
+
+	a {
+		background-color: #2251D1;
+		color: #fff;
+		border-radius: 4px;
+		margin: 20px auto 0;
+		display: inline-block;
+		padding: 8px 20px;
+	}
+}
+
+@media all and (max-width: 768px) {
+	.mobile-banner {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	body {
+		position: fixed;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+	}
+}
+
+header {
+	width: 100%;
+	height: 120px;
+	background-color: $primary-color;
+	padding: 25px 0 0;
+	margin: 0;
+	position: fixed;
+	z-index: 2;
+
+	h2 {
+		color: #fff;
+		text-align: center;
+		margin: 15px 0;
+		padding: 0;
+		font-size: 16px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+
+	.filter-container {
+		background-color: $dark-color;
+		height: 80px;
+		width: 100%;
+		max-width: 800px;
+		padding: 16px 12px;
+		margin: 0 auto;
+		z-index: 4;
+		position: relative;
+
+		.col {
+			padding: 0;
+			margin: 0;
+		}
+
+		.rbc {
+			background-color: transparent;
+			padding: 0 !important;
+			margin: 0 !important;
+			border: 0;
+			box-shadow: none;
+
+			.col {
+				padding: 0 0 0 6px;
+				margin: 0;
+			}
+
+			.rbc-search-container {
+				width: 60%;
+			}
+
+			& .row > div.col.s12:last-child {
+				width: 40%;
+				display: inline-block;
+
+				.Select-control {
+					border-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+.result-wrapper {
+	position: relative;
+	top: 120px;
+
+	.left-col, .right-col {
+		width: 50%;
+		margin: 0;
+		float: left;
+	}
+
+	.rbc-reactivemap {
+		position: fixed;
+		width: 50%;
+		right: 0;
+		top: 120px;
+		height: calc(100% - 120px);
+	}
+}
+
+.rbc.rbc-resultlist {
+	background-color: transparent;
+	padding: 30px;
+}
+
+.rbc-resultlist-container {
+	max-height: none;
+	min-height: 200px;
+	background-color: transparent;
+	box-shadow: none;
+	border: 0;
+}
+
+.rbc .rbc.rbc-resultstats {
+	text-align: right;
+	background-color: transparent;
+}
+
+.rbc-resultlist-scroll-container {
+	height: auto !important;
+}
+
+.rbc .rbc-resultlist-item {
+	.rbc-resultlist-item__image {
+		width: 60px;
+		height: 60px;
+		border-radius: 4px;
+		overflow: hidden;
+		background-size: cover;
+		background-position: top center;
+	}
+
+	.rbc-resultlist-item__details {
+		width: calc(100% - 60px);
+		white-space: normal;
+	}
+}
+
+.rbc.rbc-pagination {
+	background-color: transparent;
+	text-align: center;
+	border: 0;
+	box-shadow: none;
+}

@@ -1,0 +1,158 @@
+.rbc-resultlist-scroll-container {
+	position: relative;
+	overflow: auto;
+	padding: 0;
+
+	.rbc-resultlist-item {
+		display: block;
+		width: 100%;
+		height: auto;
+		padding: 12px 0;
+
+		p {
+			margin: 0;
+		}
+
+		@include element("image") {
+			width: 200px;
+			height: 200px;
+			float: left;
+			background-color: #fcfcfc;
+			background-size: contain;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+		@include element("details") {
+			width: calc(100% - 200px);
+			float: left;
+			padding: 0 8px;
+		}
+
+		@include element("title") {
+			width: 100%;
+			padding: 8px 0 0;
+			font-family: $font-bold;
+			float: left;
+			color: #777;
+			font-size: 14px;
+			line-height: 22px;
+			letter-spacing: 0.02em;
+			-webkit-transition: all .3s ease;
+			transition: all .3s ease;
+
+			&:hover {
+				color: #555;
+				text-decoration: underline;
+			}
+		}
+
+		@include element("desc") {
+			width: 100%;
+			padding: 4px 0;
+			float: left;
+			color: #777;
+			font-size: 14px;
+			letter-spacing: 0.02em;
+		}
+
+		@include element("rating") {
+			width: 100%;
+			display: inline-block;
+			padding: 0;
+
+			& > div {
+				position: static !important;
+			}
+		}
+
+		.rbc-image-inactive {
+			.rbc-resultlist-item__image {
+				display: none;
+			}
+
+			.rbc-resultlist-item__details {
+				float: none;
+				width: 100%;
+				padding: 0;
+			}
+		}
+
+		.rbc-image-active.rbc-image-small {
+			.rbc-resultlist-item__image {
+				width: 100px;
+				height: 100px;
+			}
+
+			.rbc-resultlist-item__details {
+				width: calc(100% - 100px);
+				padding: 0 10px;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 767px) {
+	.rbc-resultlist-scroll-container {
+		.rbc-resultlist-item {
+			@include element("image") {
+				width: 120px;
+				height: 120px;
+			}
+
+			@include element("details") {
+				width: calc(100% - 120px);
+			}
+			
+			.rbc-image-inactive {
+				.rbc-resultlist-item__image {
+					display: none;
+				}
+
+				.rbc-resultlist-item__details {
+					float: none;
+					width: 100%;
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+.rbc-resultlist-container {
+	height: auto;
+	max-height: 700px;
+	overflow: auto;
+	margin: 5px 0;
+	padding-bottom: 45px;
+
+	.rbc-placeholder {
+		padding: 60px 15px;
+		text-align: center;
+	}
+
+	&.rbc-sort-active {
+		.rbc-sortoptions {
+			position: absolute;
+			right: 0;
+			margin: 10px 0;
+
+			select {
+				height: 32px;
+			}
+		}
+	}
+}
+
+.rbc-resultlist {
+	position: relative;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
